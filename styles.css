@@ -29,6 +29,7 @@ body {
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+  position: relative;
 }
 
 /* Heading styles */
@@ -131,12 +132,10 @@ button:active {
   font-family: "Roboto Mono", monospace;
   white-space: pre-wrap;
   line-height: 1.5;
-  color: var(
-    --complement-color
-  ); /* Changed to complement color for aesthetics */
+  color: var(--complement-color);
   position: relative;
   z-index: 1;
-  font-weight: 600; /* Added to make text bolder and more readable */
+  font-weight: 600;
   text-align: center;
 }
 
