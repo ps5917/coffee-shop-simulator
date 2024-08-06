@@ -1,0 +1,184 @@
+/* Define color variables for easy management and consistency */
+:root {
+  --primary-color: #6b4226; /* Deep coffee brown */
+  --secondary-color: #d2b48c; /* Light coffee */
+  --accent-color: #f0e68c; /* Soft yellow */
+  --complement-color: #7d9e82; /* Soft green */
+  --text-color: #333333; /* Dark gray for text */
+  --background-color: #faf0e6; /* Linen */
+}
+
+/* Basic body styling */
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 20px;
+  font-size: 16px;
+}
+
+/* Main container styling */
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  background: #fff;
+  padding: 5%;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Heading styles */
+h1,
+h2 {
+  text-align: center;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-top: 20px;
+  color: var(--complement-color);
+}
+
+/* Status display styling */
+.status {
+  background-color: var(--secondary-color);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.status p {
+  margin: 10px 0;
+  width: 100%;
+  text-align: center;
+  background-color: var(--complement-color);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Action section styling */
+.actions {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.actions h2 {
+  border-bottom: 2px solid var(--complement-color);
+  padding-bottom: 10px;
+}
+
+/* Button styling */
+button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  width: calc(50% - 16px);
+  max-width: 200px;
+  padding: 12px 20px;
+  margin: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: var(--complement-color);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Message board styling */
+.output {
+  background-color: var(--secondary-color);
+  padding: 20px;
+  border-radius: 8px;
+  min-height: 150px;
+  border: 2px solid var(--complement-color);
+  position: relative;
+  overflow: hidden;
+}
+
+#MessageBoard {
+  color: var(--primary-color);
+}
+
+#messages {
+  font-family: "Roboto Mono", monospace;
+  white-space: pre-wrap;
+  line-height: 1.5;
+  color: var(--complement-color);
+  position: relative;
+  z-index: 1;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Coffee mug styling */
+.output::before {
+  content: "☕";
+  font-size: 8em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.1;
+  color: var(--complement-color);
+  z-index: 0;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  button {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* Media query for tablets and smaller desktops */
+@media (min-width: 601px) and (max-width: 900px) {
+  .container {
+    max-width: 90%;
+  }
+}
