@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop Simulator</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Coffee Shop Simulator - Manage your virtual coffee shop!"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Coffee Shop Simulator</h1>
+      <!-- Status display for money and beans -->
+      <div class="status">
+        <p>Money: $<span id="money">200</span></p>
+        <p>Beans: <span id="beans">40</span></p>
+      </div>
+      <!-- Buttons for selling drinks -->
+      <div class="actions">
+        <h2>Sell Drinks</h2>
+        <button onclick="coffeeShop.sellDrink('latte')">Latte</button>
+        <button onclick="coffeeShop.sellDrink('americano')">Americano</button>
+        <button onclick="coffeeShop.sellDrink('doubleShot')">
+          Double Shot
+        </button>
+        <button onclick="coffeeShop.sellDrink('frenchPress')">
+          French Press
+        </button>
+      </div>
+      <!-- Button for buying beans -->
+      <div class="actions">
+        <h2>Buy Beans</h2>
+        <button onclick="coffeeShop.buyBeans('reviveBlend', 10)">
+          Buy 10 lbs - Revive Guatemala Beans
+        </button>
+      </div>
+      <!-- Output area for messages -->
+      <div class="output">
+        <h2>Output</h2>
+        <div id="messages"></div>
+      </div>
+    </div>
+    <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
