@@ -63,4 +63,27 @@ var coffeeShop = {
           if(this.beans >= this.drinkRequirements[drinkType]){
               this.money = this.money + this.drinkPrice[drinkType]; 
               updateDisplay("Cha-ching! That'll be $" + this.drinkPrice[drinkType] + " please");
-              updateDisplay("We now have $" + this.money + "
+              updateDisplay("We now have $" + this.money + " in total");
+              this.makeDrink(drinkType);
+          } else {
+              updateDisplay("Sorry, we don't have enough beans to make that drink");
+          }
+      }
+      updateStatus();
+  },
+
+  // Method to make a drink
+  makeDrink: function(drinkType) {
+      if(this.beans >= this.drinkRequirements[drinkType]){
+          this.beans = this.beans - this.drinkRequirements[drinkType]; 
+          updateDisplay(drinkType + " is ready");
+          updateDisplay("We've got " + this.beans + " beans left");
+      } else {
+          updateDisplay("Scram kid, we're outta beans");
+      }
+      updateStatus();
+  }
+};
+
+// Initialize display
+updateStatus();
