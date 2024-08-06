@@ -45,6 +45,5 @@ Feel free to fork this project and submit pull requests with improvements or new
 This project is open source and available under the [MIT License](LICENSE).
 
 ## Contact
-[Your Name] - [Your Email or LinkedIn]
-
+Brent Dolan - https://www.linkedin.com/in/brent-dolan/
 Project Link: [https://github.com/yourusername/coffee-shop-simulator](https://github.com/yourusername/coffee-shop-simulator)
